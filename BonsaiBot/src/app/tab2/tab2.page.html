@@ -6,4 +6,18 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+
+<ion-list>
+	  <ion-item *ngFor="let entry of form">
+	    <ion-label>{{entry.val}}</ion-label>
+	    <ion-toggle slot="end" color="dark" [(ngModel)]="entry.isChecked"></ion-toggle>
+	  </ion-item>
+	<ion-item>
+	  <ion-label>Next watering time</ion-label>
+	  <ion-datetime display-format="MMM DD, YYYY HH:mm"></ion-datetime>
+	</ion-item>
+</ion-list>
+
+	<ion-button expand="block" size="large" color="dark" (click)="presentToast('Time scheduled!')">Start Watering</ion-button>
+</ion-content>

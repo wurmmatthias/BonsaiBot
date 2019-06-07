@@ -1,5 +1,7 @@
 {
   "name": "BonsaiBot",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
