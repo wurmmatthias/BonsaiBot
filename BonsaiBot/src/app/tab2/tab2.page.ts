@@ -18,8 +18,10 @@ export class Tab2Page {
 
     async presentToast(msg) {
     const toast = await this.toastController.create({
+      header: 'BonsaiBot says:',
       message: msg,
-      color: 'dark',
+      position: 'middle',
+      color: 'success',
       duration: 3500
     });
     toast.present();
