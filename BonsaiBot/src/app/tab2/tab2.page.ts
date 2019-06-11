@@ -12,9 +12,8 @@ export class Tab2Page {
   constructor(public toastController: ToastController) {}
 
     public form = [
-      { val: 'Show notification when ', isChecked: true },
-      { val: 'Test', isChecked: false },
-      { val: 'Do a Test spray right away.', isChecked: false }
+      { val: 'Show notification when watering', isChecked: true },
+      { val: 'Test the system', isChecked: false }
     ];
 
     async presentToast(msg) {
