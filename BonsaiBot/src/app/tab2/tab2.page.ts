@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ToastController } from '@ionic/angular';
-
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -9,7 +9,7 @@ import { ToastController } from '@ionic/angular';
 })
 export class Tab2Page {
 
-  constructor(public toastController: ToastController) {}
+  constructor(public toastController: ToastController, public alertController: AlertController) {}
 
     public form = [
       { val: 'Show notification when watering', isChecked: true },
@@ -21,11 +21,30 @@ export class Tab2Page {
       header: 'BonsaiBot says:',
       message: msg,
       position: 'middle',
+      showCloseButton: true,
       color: 'success',
       duration: 3500
     });
     toast.present();
   }
+
+  async presentAlert(header, sub, msg) {
+  const alert = await this.alertController.create({
+    header: header,
+    subHeader: sub,
+    message: msg,
+    buttons: ['OK']
+  });
+
+  await alert.present();
+}
+
+async doTest() {
+  this.presentAlert('Testprocedure', '', 'A testsignal should now be visible for 5 seconds on your watering device.');
+  /*
+  * Do testing stuff here.
+  */
+}
 
 
 }

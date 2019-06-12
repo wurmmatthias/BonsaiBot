@@ -25,5 +25,12 @@
 	</ion-item>
 </ion-list>
 
-	<ion-button expand="block" size="large" color="dark" (click)="presentToast('Time scheduled!')">Start Watering</ion-button>
+	<ion-button expand="block" size="large" color="dark" (click)="presentToast('Time scheduled!')">
+  <ion-icon slot="start" name="water"></ion-icon>
+    Start Watering
+  </ion-button>
+  <ion-button expand="block" size="large" color="danger" (click)="doTest()">
+  <ion-icon slot="start" name="wifi"></ion-icon>
+    Test Connection
+  </ion-button>
 </ion-content>
