@@ -48,6 +48,7 @@ async doTest() {
 
 async doWater() {
   this.presentAlert('Watering','has been initialized.','Congrats! Your plant is receiving some fresh water about now.');
+  
 }
 
 
